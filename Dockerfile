@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y openvpn
 
 COPY ipvanish.ovpn /etc/openvpn/client.conf
+COPY ca.ipvanish.com.crt /etc/openvpn/ca.ipvanish.com.crt
 
 ENV VPN_USERNAME your_username
 ENV VPN_PASSWORD your_password
